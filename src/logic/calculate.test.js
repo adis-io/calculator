@@ -155,7 +155,8 @@ describe('calculate', () => {
     total: '0.04',
   });
 
-  // Test that pressing the multiplication or division sign multiple times should not affect the current computation
+  // Test that pressing the multiplication or division sign multiple times
+  // should not affect the current computation
   test(['2', 'x', 'x'], {
     total: '2',
     operation: 'x',

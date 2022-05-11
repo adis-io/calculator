@@ -5,12 +5,9 @@ import Button from './Button';
 import './ButtonPanel.css';
 
 export default class ButtonPanel extends React.Component {
-  static propTypes = {
-    clickHandler: PropTypes.func,
-  };
-
   handleClick = (buttonName) => {
-    this.props.clickHandler(buttonName);
+    const { clickHandler } = this.props;
+    clickHandler(buttonName);
   };
 
   render() {
@@ -49,3 +46,7 @@ export default class ButtonPanel extends React.Component {
     );
   }
 }
+
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func,
+};
