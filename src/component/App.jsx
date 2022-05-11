@@ -11,12 +11,13 @@ export default class App extends React.Component {
     this.state = {
       total: null,
       next: null,
+      // eslint-disable-next-line react/no-unused-state
       operation: null,
     };
   }
 
   handleClick = (buttonName) => {
-    this.setState(calculate(this.state, buttonName));
+    this.setState((previousState) => (calculate(previousState, buttonName)));
   };
 
   render() {
