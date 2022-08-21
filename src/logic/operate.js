@@ -1,4 +1,4 @@
-import Big from 'big.js';
+import Big from "big.js";
 
 export default function operate(numberOne, numberTwo, operation) {
   const one = Big(numberOne || '0');
@@ -15,7 +15,7 @@ export default function operate(numberOne, numberTwo, operation) {
   if (operation === '÷') {
     if (two === '0') {
       alert('Divide by 0 error');
-      return '0';
+      return "0";
     }
     return one.div(two).toString();
   }
